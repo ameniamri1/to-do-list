@@ -1,0 +1,101 @@
+.wishlist-container {
+  width: 350px;
+  height: 250px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  border: 2px solid #bfa38f5c;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+  background-color: #33ff5830;
+}
+h4 {
+  color: whitesmoke;
+}
+.wishlist-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wishlist-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+}
+
+.wishlist-form button {
+  padding: 10px 20px;
+  background: #a4d3a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-form button:hover {
+  background: #33ff57;
+}
+
+.wishlist {
+  list-style: none;
+  padding: 0;
+}
+
+.wishlist li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist li:hover {
+  background: #f1f1f1;
+}
+
+.wishlist li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .wishlist-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wishlist-container {
+    width: 100%;
+  }
+}
+.wishlist-container::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+  height: 10px; /* Hauteur de la barre de défilement horizontale (si nécessaire) */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb {
+  background: #bfa38f; /* Couleur du "pouce" de la barre de défilement */
+  border-radius: 14px; /* Arrondi du "pouce" */
+  border: 2px solid #f4efe0; /* Ajout d'une bordure pour un effet stylisé */
+}
+
+.wishlist-container::-webkit-scrollbar-track {
+  background: #f4efe0; /* Couleur de l'arrière-plan de la barre de défilement */
+  border-radius: 14px; /* Arrondi de la piste */
+}
+
+.wishlist-container::-webkit-scrollbar-thumb:hover {
+  background: #8c6f58; /* Couleur du "pouce" au survol */
+}

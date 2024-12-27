@@ -1,0 +1,16 @@
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 images par ligne */
+  gap: 10px; /* Espacement entre les images */
+    background-color: #ff33ff41;
+    border-radius: 15px;
+    
+}
+
+.photo-container img {
+  width: 75%; /* Chaque image occupe toute la largeur de sa cellule */
+  height: auto; /* Préserve les proportions */
+  border-radius: 5px; /* Coins arrondis (optionnel) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre (optionnel) */
+    margin: 20px;
+}

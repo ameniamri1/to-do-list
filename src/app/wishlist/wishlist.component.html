@@ -1,0 +1,20 @@
+<div class="wishlist-container">
+  <h4>Wishlist</h4>
+  <div class="wishlist-form">
+    <input
+      [(ngModel)]="newWish"
+      placeholder="Ajouter un souhait..."
+      (keyup.enter)="addWish()"
+    />
+    <button (click)="addWish()">Ajouter</button>
+  </div>
+  <ul class="wishlist">
+    <li
+      *ngFor="let wish of wishlist; let i = index"
+      [class.completed]="wish.completed"
+    >
+      <span (click)="toggleCompleted(i)">{{ wish.text }}</span>
+      <button class="delete-btn" (click)="removeWish(i)">Supprimer</button>
+    </li>
+  </ul>
+</div>

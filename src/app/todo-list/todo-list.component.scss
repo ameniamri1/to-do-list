@@ -1,0 +1,170 @@
+.todo-container {
+  //width: 500px;
+  height: 90VH;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  border: 2px solid #bfa38f5c;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+  //background-color: #9e3e4485;
+  background-color:#ff00ff2e ;
+  padding: 12px;
+}
+
+.app-categories {
+  flex-shrink: 0;
+  width: 200px;
+  background: #fff;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+h2 {
+  text-align: center;
+  font-size: 26px;
+  color: whitesmoke; /* Couleur terre foncée plus chaleureuse */
+}
+
+.add-task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #e6ceac;
+  border-radius: 6px;
+  margin-right: 12px;
+}
+
+.add-task button {
+  padding: 12px 18px;
+  background: linear-gradient(
+    135deg,
+    #b84d517f,
+    #9e3e4473
+  ); /* Dégradé de bordeaux */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background: linear-gradient(
+    135deg,
+    #9e3e44,
+    #8a2f39
+  ); 
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #fff7e57d, #ffefd181);
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.21);
+  width: 300px;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #a47a5d;
+}
+
+.task-list .delete-btn {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #c13a2b7d, #932c2189);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-list .delete-btn:hover {
+  background: linear-gradient(135deg, #932c21, #7c261b);
+}
+
+button.edit {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #be995088, #9a7d3d80);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.edit:hover {
+  background: linear-gradient(135deg, #9a7d3d, #7f672b);
+}
+
+.task-list input[type="text"] {
+  width: 22%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #d8bfa5;
+  border-radius: 6px;
+}
+.category {
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, #9c6c7e7a, #885d7179);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.catlist {
+  background-color: #c2a0b0;
+}
+
+.todo-container::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+  height: 10px; /* Hauteur de la barre de défilement horizontale (si nécessaire) */
+}
+
+.todo-container::-webkit-scrollbar-thumb {
+  background: #bfa38f; /* Couleur du "pouce" de la barre de défilement */
+  border-radius: 14px; /* Arrondi du "pouce" */
+  border: 2px solid #f4efe0; /* Ajout d'une bordure pour un effet stylisé */
+}
+
+.todo-container::-webkit-scrollbar-track {
+  background: #f4efe0; /* Couleur de l'arrière-plan de la barre de défilement */
+  border-radius: 14px; /* Arrondi de la piste */
+}
+
+.todo-container::-webkit-scrollbar-thumb:hover {
+  background: #8c6f58; /* Couleur du "pouce" au survol */
+}
+
+@media (max-width: 768px) {
+  .todo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todo-container{
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+<form (ngSubmit)="addRemainder()" class="form">
+  <h3>Reminders</h3>
+  <input
+    type="text"
+    [(ngModel)]="newRemainder.title"
+    name="title"
+    placeholder="Title"
+    required
+  />
+  <input
+    type="text"
+    [(ngModel)]="newRemainder.description"
+    name="description"
+    placeholder="Description"
+    required
+  />
+  <input
+    type="date"
+    [(ngModel)]="newRemainder.dueDate"
+    name="dueDate"
+    required
+    class="date"
+  />
+  <button type="submit">Add Reminder</button>
+
+  <ul>
+    <li *ngFor="let reminder of reminders">
+      <h4>{{ reminder.title }}</h4>
+      <br />
+      <p>{{ reminder.description }}</p>
+      <br />
+      <p>Date: {{ reminder.dueDate }}</p>
+    </li>
+  </ul>
+</form>

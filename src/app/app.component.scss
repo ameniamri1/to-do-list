@@ -1,0 +1,57 @@
+/* Style principal pour organiser les sections */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh; /* Assurez-vous que la page occupe toute la hauteur */
+  padding: 10px;
+  gap: 20px; /* Espace entre les colonnes */
+}
+
+/* Section gauche (wishlist + notes) */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  width: 30%; /* Ajustez selon vos besoins */
+  gap: 5px;
+}
+
+/* Section centrale (todo list) */
+.center-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+/* Section droite (reminder + galerie de photo) */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  width: 30%; /* Ajustez selon vos besoins */
+  gap: 5px;
+}
+
+app-wishlist,
+app-notes,
+app-reminder,
+app-photo,
+app-todo-list {
+  
+  padding: 10px;
+  
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-panel,
+  .center-panel,
+  .right-panel {
+    width: 100%;
+  }
+}

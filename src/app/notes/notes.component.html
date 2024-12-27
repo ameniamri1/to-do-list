@@ -1,0 +1,19 @@
+<div class="notes-container">
+  <h3 class="notes-title">Notes</h3>
+  <div class="ajout">
+    <input
+      [(ngModel)]="newNote"
+      placeholder="Ajouter une note"
+      class="note-input"
+    />
+    <button (click)="addNote()" class="add-note-button">Ajouter</button>
+  </div>
+  <ul class="notes-list">
+    <li *ngFor="let note of notes; let i = index" class="note-item">
+      {{ note }}
+      <button (click)="deleteNote(i)" class="delete-note-button">
+        Supprimer
+      </button>
+    </li>
+  </ul>
+</div>

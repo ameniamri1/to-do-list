@@ -1,0 +1,87 @@
+form {
+  // width: 500px;
+  height: 350px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #bfa38f5c;
+  border-radius: 10px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+  background-color: #00ffff3c;
+}
+h3 {
+  text-align: center;
+  font-size: 26px;
+  color: whitesmoke;
+}
+h4 {
+  color: #392011;
+}
+input {
+  width: 55vh;
+  height: 30px;
+  padding: 2px;
+  font-size: 13px;
+  border: 1px solid #e6ceac82;
+  border-radius: 12px;
+  margin-right: 12px;
+  text-align: center;
+  margin: 2px;
+}
+button {
+  padding: 12px 18px;
+  background-color: #B3E5FC;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #00FFFF ;/* Dégradé plus profond de bordeaux */
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  margin-bottom: 2px;
+  background: linear-gradient(135deg, #fff7e57d, #ffefd181);
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.21);
+  width: 120px;
+}
+
+form::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+  height: 10px; /* Hauteur de la barre de défilement horizontale (si nécessaire) */
+}
+
+form::-webkit-scrollbar-thumb {
+  background: #bfa38f; /* Couleur du "pouce" de la barre de défilement */
+  border-radius: 14px; /* Arrondi du "pouce" */
+  border: 2px solid #f4efe0; /* Ajout d'une bordure pour un effet stylisé */
+}
+
+form::-webkit-scrollbar-track {
+  background: #f4efe0; /* Couleur de l'arrière-plan de la barre de défilement */
+  border-radius: 14px; /* Arrondi de la piste */
+}
+
+form::-webkit-scrollbar-thumb:hover {
+  background: #8c6f58; /* Couleur du "pouce" au survol */
+}
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}
