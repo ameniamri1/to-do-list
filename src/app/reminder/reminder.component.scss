@@ -56,6 +56,7 @@ li {
   width: 120px;
 }
 
+
 form::-webkit-scrollbar {
   width: 10px; /* Largeur de la barre de défilement */
   height: 10px; /* Hauteur de la barre de défilement horizontale (si nécessaire) */
@@ -84,4 +85,66 @@ form::-webkit-scrollbar-thumb:hover {
   form {
     width: 100%;
   }
+}
+/* Suppression des puces et marges pour la liste */
+.reminder-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style général de chaque élément de rappel */
+.reminder-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation lors du survol */
+.reminder-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenu de l'élément de rappel */
+.reminder-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* En-tête avec le titre centré */
+.reminder-header {
+  text-align: center;
+  
+}
+
+.reminder-header h4 {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Corps avec description */
+.reminder-body {
+  font-size: 1em;
+  color: #34495e;
+}
+
+.reminder-description {
+  line-height: 1.6;
+}
+
+/* Pied de l'élément avec la date */
+.reminder-footer {
+  margin-top: auto; /* Assure que la date soit toujours en bas */
+  text-align: right;
+}
+
+.reminder-due-date {
+  font-weight: bold;
+  color: #0c05e0;
+  font-size: 1.1em;
 }

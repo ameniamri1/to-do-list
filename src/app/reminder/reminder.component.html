@@ -23,13 +23,21 @@
   />
   <button type="submit">Add Reminder</button>
 
-  <ul>
-    <li *ngFor="let reminder of reminders">
-      <h4>{{ reminder.title }}</h4>
-      <br />
-      <p>{{ reminder.description }}</p>
-      <br />
-      <p>Date: {{ reminder.dueDate }}</p>
+  <ul class="reminder-list">
+    <li *ngFor="let reminder of reminders" class="reminder-item">
+      <div class="reminder-content">
+        <div class="reminder-header">
+          <h4>{{ reminder.title }}</h4>
+        </div>
+        <div class="reminder-body">
+          <p class="reminder-description">{{ reminder.description }}</p>
+        </div>
+        <div class="reminder-footer">
+          <span class="reminder-due-date"
+            >Date: {{ reminder.dueDate | date : "shortDate" }}</span
+          >
+        </div>
+      </div>
     </li>
   </ul>
 </form>
